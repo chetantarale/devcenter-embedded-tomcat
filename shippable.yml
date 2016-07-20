@@ -1,0 +1,12 @@
+language: java
+
+jdk:
+   # - openjdk7
+   # - oraclejdk7
+   # - openjdk6
+   - oraclejdk8
+build:
+   ci:
+    - mvn package
+    - sh target/bin/webapp
+    - wget http://localhost:8080
