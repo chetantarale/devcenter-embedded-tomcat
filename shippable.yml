@@ -8,5 +8,5 @@ jdk:
 build:
    ci:
     - mvn package
-    - sh target/bin/webapp
-    - wget http://localhost:8080
+    - nohup sh target/bin/webapp &
+    - wget http://127.0.0.1:8080
